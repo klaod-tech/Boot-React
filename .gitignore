@@ -1,0 +1,23 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+
+# Frontend (React)
+node_modules/
+mall/build/
+.env.local
+.env.*.local
+
+# Backend (Spring Boot / Gradle)
+.gradle/
+mallapi/build/
+mallapi/bin/
+mallapi/out/
+
+# Secrets (DB password, Kakao key, etc.)
+application-secret.properties
+*.secret
