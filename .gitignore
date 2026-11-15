@@ -17,7 +17,3 @@ mall/build/
 mallapi/build/
 mallapi/bin/
 mallapi/out/
-
-# Secrets (DB password, Kakao key, etc.)
-application-secret.properties
-*.secret
