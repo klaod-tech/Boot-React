@@ -17,20 +17,14 @@ const initState = {
 }
 
 const ListComponent = () => {
-
   const {page, size, refresh, moveToList, moveToRead} = useCustomMove()//refresh
-
   //serverData는 나중에 사용
   const [serverData, setServerData] = useState(initState)
-
-
   useEffect(() => {
-
     getList({page,size}).then(data => {
       console.log(data)
       setServerData(data)
     })
-
   }, [page,size, refresh])
 
   return ( 
