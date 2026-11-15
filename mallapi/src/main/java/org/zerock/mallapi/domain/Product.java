@@ -2,7 +2,6 @@ package org.zerock.mallapi.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.BatchSize;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +35,6 @@ public class Product {
 
   @ElementCollection
   @Builder.Default
-  @BatchSize(size = 20)
   private List<ProductImage> imageList = new ArrayList<>();
 
   public void changePrice(int price) {

@@ -24,12 +24,4 @@ public interface ProductRepository extends JpaRepository<Product, Long>{
   
   @Query("select p, pi  from Product p left join p.imageList pi  where pi.ord = 0 and p.delFlag = false ")
   Page<Object[]> selectList(Pageable pageable);
-
-
-  @Query("select p, pi  from Product p left join p.imageList pi  where pi.ord >= 0 and p.delFlag = false ")
-  Page<Object[]> selectList2(Pageable pageable);
-
-
-  @Query("select p from Product p left join p.imageList pi  where p.delFlag = false ")
-  Page<Product> selectListWitAll(Pageable pageable);
 }

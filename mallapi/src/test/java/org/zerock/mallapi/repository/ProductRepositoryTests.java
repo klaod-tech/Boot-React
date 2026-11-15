@@ -120,38 +120,6 @@ public class ProductRepositoryTests {
 
   }
 
-  @Test
-  public void testList2() {
-
-    //org.springframework.data.domain 패키지
-    Pageable pageable = PageRequest.of(0, 10, Sort.by("pno").descending());
-
-    Page<Object[]> result = productRepository.selectList2(pageable);
-
-    //java.util
-    result.getContent().forEach(arr -> log.info(Arrays.toString(arr)));
-
-  }
-
-  @Transactional
-  @Test
-  public void testListWithAll() {
-
-    //org.springframework.data.domain 패키지
-    Pageable pageable = PageRequest.of(0, 10, Sort.by("pno").descending());
-
-    Page<Product> result = productRepository.selectListWitAll(pageable);
-
-    //java.util
-    result.getContent().forEach(product ->{
-
-      log.info(product);
-      log.info(product.getImageList());
-
-    });
-
-  }
-
 
 
 }
